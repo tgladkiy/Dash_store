@@ -1,0 +1,116 @@
+id_scu,avg_q,class_id,class,brand,line,exw,markup,tax,price
+1,5,paint,Краска,Tikkurila,Joker,1250,0.3,0.06,1728.723404255319
+2,5,paint,Краска,Tikkurila,Luja,1850,0.3,0.06,2558.5106382978724
+3,5,paint,Краска,Tikkurila,Harmony,1430,0.3,0.06,1977.659574468085
+4,5,paint,Краска,Tikkurila,Optiva,1730,0.3,0.06,2392.553191489362
+5,5,paint,Краска,Tikkurila,Tunto,2100,0.3,0.06,2904.255319148936
+6,5,paint,Краска,Tikkurila,Facade,1100,0.3,0.06,1521.276595744681
+7,5,paint,Краска,Tikkurila,Valtti Color,1395,0.3,0.06,1929.2553191489362
+8,5,paint,Краска,Sherwin-Williams,SuperPaint,1346,0.3,0.06,1861.4893617021276
+9,5,paint,Краска,Sherwin-Williams,Duration,2500,0.3,0.06,3457.446808510638
+10,5,paint,Краска,Sherwin-Williams,Emerald,2350,0.3,0.06,3250.0
+11,5,paint,Краска,Sherwin-Williams,Cashmere,2700,0.3,0.06,3734.0425531914893
+12,5,paint,Краска,Sherwin-Williams,Hartomy,3100,0.3,0.06,4287.234042553191
+13,5,paint,Краска,Sherwin-Williams,Resilience,1750,0.3,0.06,2420.2127659574467
+14,5,paint,Краска,Sherwin-Williams,ProMar,3250,0.3,0.06,4494.680851063829
+15,5,paint,Краска,Jotun,Majestic True Beauty,1750,0.3,0.06,2420.2127659574467
+16,5,paint,Краска,Jotun,Kids Collection,1680,0.3,0.06,2323.404255319149
+17,5,paint,Краска,Jotun,Fenomastic,1340,0.3,0.06,1853.191489361702
+18,5,paint,Краска,Jotun,Lady Design,1950,0.3,0.06,2696.808510638298
+19,5,paint,Краска,Jotun,Demidekk,1735,0.3,0.06,2399.468085106383
+20,5,paint,Краска,Jotun,Jotashield,2100,0.3,0.06,2904.255319148936
+21,5,paint,Краска,Jotun,Sens,2350,0.3,0.06,3250.0
+22,5,paint,Краска,Benjamin Moore,Aura,4560,0.3,0.06,6306.382978723404
+23,5,paint,Краска,Benjamin Moore,Regal Select,3850,0.3,0.06,5324.468085106383
+24,5,paint,Краска,Benjamin Moore,Natura,5200,0.3,0.06,7191.489361702127
+25,5,paint,Краска,Benjamin Moore,Advance,3600,0.3,0.06,4978.723404255319
+26,5,paint,Краска,Benjamin Moore,Ultra Spec,4320,0.3,0.06,5974.468085106383
+27,5,paint,Краска,Benjamin Moore,Waterborne Ceiling Paint,4850,0.3,0.06,6707.446808510638
+28,5,paint,Краска,Benjamin Moore,Arborcoat,6500,0.3,0.06,8989.361702127659
+29,5,paint,Краска,Dulux,Diamond,1790,0.3,0.06,2475.531914893617
+30,5,paint,Краска,Dulux,Easycare,2100,0.3,0.06,2904.255319148936
+31,5,paint,Краска,Dulux,Nutmeg White,1680,0.3,0.06,2323.404255319149
+32,5,paint,Краска,Dulux,Trade Vinyl Matt,2300,0.3,0.06,3180.851063829787
+33,5,paint,Краска,Dulux,Soft Stone,1950,0.3,0.06,2696.808510638298
+34,5,paint,Краска,Dulux,Heritage,3150,0.3,0.06,4356.382978723404
+35,5,paint,Краска,Dulux,Endurance,2750,0.3,0.06,3803.191489361702
+36,13,ceramic,Керамика,Kerama Marazzi,Granit,1750,0.3,0.06,2420.2127659574467
+37,13,ceramic,Керамика,Kerama Marazzi,Cemento,2200,0.3,0.06,3042.553191489362
+38,13,ceramic,Керамика,Kerama Marazzi,Wood,1950,0.3,0.06,2696.808510638298
+39,13,ceramic,Керамика,Kerama Marazzi,Stone,2500,0.3,0.06,3457.446808510638
+40,13,ceramic,Керамика,Kerama Marazzi,Metallic,3100,0.3,0.06,4287.234042553191
+41,13,ceramic,Керамика,Cersanit,Porto,1200,0.3,0.06,1659.5744680851064
+42,13,ceramic,Керамика,Cersanit,Forrest,1850,0.3,0.06,2558.5106382978724
+43,13,ceramic,Керамика,Cersanit,Vegas,1350,0.3,0.06,1867.0212765957447
+44,13,ceramic,Керамика,Cersanit,Zamora,1100,0.3,0.06,1521.276595744681
+45,13,ceramic,Керамика,Cersanit,Nordic,2700,0.3,0.06,3734.0425531914893
+46,13,ceramic,Керамика,Rako,Beton,2000,0.3,0.06,2765.9574468085107
+47,13,ceramic,Керамика,Rako,Terrace,1840,0.3,0.06,2544.68085106383
+48,13,ceramic,Керамика,Rako,Nature,2200,0.3,0.06,3042.553191489362
+49,13,ceramic,Керамика,Rako,Marble,2700,0.3,0.06,3734.0425531914893
+50,13,ceramic,Керамика,Rako,Textile,3100,0.3,0.06,4287.234042553191
+51,13,ceramic,Керамика,Porcelanosa,Ferroker,6500,0.3,0.06,8989.361702127659
+52,13,ceramic,Керамика,Porcelanosa,Par-ker,5500,0.3,0.06,7606.382978723404
+53,13,ceramic,Керамика,Porcelanosa,Ston-ker,7750,0.3,0.06,10718.085106382978
+54,13,ceramic,Керамика,Porcelanosa,Cersaie,9800,0.3,0.06,13553.191489361701
+55,13,ceramic,Керамика,Porcelanosa,Miralles,7900,0.3,0.06,10925.531914893616
+56,25,laminate,Ламинат,Classen,Vitality,1250,0.3,0.06,1728.723404255319
+57,25,laminate,Ламинат,Classen,Visiogrande,1370,0.3,0.06,1894.6808510638298
+58,25,laminate,Ламинат,Classen,Trendtime,1440,0.3,0.06,1991.4893617021276
+59,25,laminate,Ламинат,Classen,Home,1600,0.3,0.06,2212.7659574468084
+60,25,laminate,Ламинат,Classen,Evolution,1750,0.3,0.06,2420.2127659574467
+61,25,laminate,Ламинат,Tarkett,Click,1570,0.3,0.06,2171.276595744681
+62,25,laminate,Ламинат,Tarkett,Ultimate,1680,0.3,0.06,2323.404255319149
+63,25,laminate,Ламинат,Tarkett,Lamin'art,1354,0.3,0.06,1872.5531914893618
+64,25,laminate,Ламинат,Tarkett,Elite,1680,0.3,0.06,2323.404255319149
+65,25,laminate,Ламинат,Tarkett,Essentials,2100,0.3,0.06,2904.255319148936
+66,25,laminate,Ламинат,Kronotex,Mammut,3650,0.3,0.06,5047.872340425532
+67,25,laminate,Ламинат,Kronotex,Exquisit,2780,0.3,0.06,3844.68085106383
+68,25,laminate,Ламинат,Kronotex,Robusto,3150,0.3,0.06,4356.382978723404
+69,25,laminate,Ламинат,Kronotex,Dynamic,3800,0.3,0.06,5255.31914893617
+70,25,laminate,Ламинат,Kronotex,Selection,4100,0.3,0.06,5670.212765957447
+71,25,laminate,Ламинат,Quick-Step,Classic,1425,0.3,0.06,1970.7446808510638
+72,25,laminate,Ламинат,Quick-Step,Impressive,1650,0.3,0.06,2281.9148936170213
+73,25,laminate,Ламинат,Quick-Step,Eligna,1320,0.3,0.06,1825.5319148936169
+74,25,laminate,Ламинат,Quick-Step,Majestic,1100,0.3,0.06,1521.276595744681
+75,25,laminate,Ламинат,Quick-Step,Largo,1950,0.3,0.06,2696.808510638298
+76,7,wallpaper,Обои,Ecostyle,Blossom,500,0.3,0.06,691.4893617021277
+77,7,wallpaper,Обои,Ecostyle,Florescence,650,0.3,0.06,898.9361702127659
+78,7,wallpaper,Обои,Ecostyle,Heritage,780,0.3,0.06,1078.723404255319
+79,7,wallpaper,Обои,Ecostyle,Paradise,830,0.3,0.06,1147.872340425532
+80,7,wallpaper,Обои,Ecostyle,Vibrant,920,0.3,0.06,1272.340425531915
+81,7,wallpaper,Обои,Rasch,Cubana,600,0.3,0.06,829.7872340425532
+82,7,wallpaper,Обои,Rasch,Factory,700,0.3,0.06,968.0851063829787
+83,7,wallpaper,Обои,Rasch,Sensual,800,0.3,0.06,1106.3829787234042
+84,7,wallpaper,Обои,Rasch,Marble,900,0.3,0.06,1244.6808510638298
+85,7,wallpaper,Обои,Rasch,Scandi,850,0.3,0.06,1175.531914893617
+86,7,wallpaper,Обои,Vescom,Blown,250,0.3,0.06,345.74468085106383
+87,7,wallpaper,Обои,Vescom,Palatino,350,0.3,0.06,484.04255319148933
+88,7,wallpaper,Обои,Vescom,Lismore,650,0.3,0.06,898.9361702127659
+89,7,wallpaper,Обои,Vescom,Baux,430,0.3,0.06,594.6808510638298
+90,7,wallpaper,Обои,Vescom,Gerardo,750,0.3,0.06,1037.2340425531916
+91,7,wallpaper,Обои,DDecor,Linen,1750,0.3,0.06,2420.2127659574467
+92,7,wallpaper,Обои,DDecor,Romantica,2150,0.3,0.06,2973.404255319149
+93,7,wallpaper,Обои,DDecor,Clear Skies,2750,0.3,0.06,3803.191489361702
+94,7,wallpaper,Обои,DDecor,Nature Resort,2330,0.3,0.06,3222.3404255319147
+95,7,wallpaper,Обои,DDecor,Savoy,2990,0.3,0.06,4135.106382978724
+96,6,plaster,Шпаклевка,Knauf,Fugenfüller,350,0.3,0.06,484.04255319148933
+97,6,plaster,Шпаклевка,Knauf,Rotband,490,0.3,0.06,677.6595744680851
+98,6,plaster,Шпаклевка,Knauf,Uniflott,500,0.3,0.06,691.4893617021277
+99,6,plaster,Шпаклевка,Knauf,Finish,680,0.3,0.06,940.4255319148936
+100,6,plaster,Шпаклевка,Knauf,Leichtspachtel,990,0.3,0.06,1369.1489361702127
+101,6,plaster,Шпаклевка,Tokuyama,Fine,1000,0.3,0.06,1382.9787234042553
+102,6,plaster,Шпаклевка,Tokuyama,Master,1200,0.3,0.06,1659.5744680851064
+103,6,plaster,Шпаклевка,Tokuyama,Lightweight,1300,0.3,0.06,1797.8723404255318
+104,6,plaster,Шпаклевка,Tokuyama,Mix,1125,0.3,0.06,1555.851063829787
+105,6,plaster,Шпаклевка,Tokuyama,Joint,1750,0.3,0.06,2420.2127659574467
+106,6,plaster,Шпаклевка,Akrilan,Base,280,0.3,0.06,387.2340425531915
+107,6,plaster,Шпаклевка,Akrilan,Universal,320,0.3,0.06,442.55319148936167
+108,6,plaster,Шпаклевка,Akrilan,Interior,380,0.3,0.06,525.531914893617
+109,6,plaster,Шпаклевка,Akrilan,Facade,450,0.3,0.06,622.3404255319149
+110,6,plaster,Шпаклевка,Akrilan,Decorative,590,0.3,0.06,815.9574468085107
+111,6,plaster,Шпаклевка,Sheetrock,Top,950,0.3,0.06,1313.8297872340424
+112,6,plaster,Шпаклевка,Sheetrock,Control,1200,0.3,0.06,1659.5744680851064
+113,6,plaster,Шпаклевка,Sheetrock,Plus,1350,0.3,0.06,1867.0212765957447
+114,6,plaster,Шпаклевка,Sheetrock,Sand,1480,0.3,0.06,2046.8085106382978
+115,6,plaster,Шпаклевка,Sheetrock,Purpose,1850,0.3,0.06,2558.5106382978724
