@@ -1,15 +1,12 @@
 import dash
 import pandas as pd
-import numpy as np
 import plotly.graph_objs as go
 import plotly.express as px
-from dash import Dash, html, dcc, callback
+from dash import html, dcc, callback
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output 
-from flask import Flask
 from datetime import datetime
-import datetime as dt 
-from plotly.subplots import make_subplots
+
 
 #установим формат вывода данных типа float - 2 знака после заптой (для лучшего восприятия числовых данных)
 pd.set_option('display.float_format', '{:.2f}'.format)

@@ -1,21 +1,11 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import dash
 import pandas as pd
-import numpy as np
 import plotly.graph_objs as go
 import plotly.express as px
-from dash import Dash, html, dcc, callback
+from dash import html, dcc, callback
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output 
-from flask import Flask
 from datetime import datetime
-import datetime as dt 
-from plotly.subplots import make_subplots
 
 #установим формат вывода данных типа float - 2 знака после заптой (для лучшего восприятия числовых данных)
 pd.set_option('display.float_format', '{:.2f}'.format)
@@ -44,14 +34,9 @@ clrs  = { 'basic' : '#2c3e50',
 
 # Вызов и обработка данных 
 
-# In[4]:
-
 
 fake_today_dt = pd.to_datetime('2024-01-30', format='%Y-%m-%d')
 fake_today_mth_dt = fake_today_dt.to_period('M')
-
-
-# In[5]:
 
 
 orders_by_managers = pd.read_csv('orders_by_managers.csv')
@@ -60,8 +45,6 @@ orders_by_managers['date'] = pd.to_datetime(orders_by_managers['date'])
 
 
 # ### Дата отчета
-
-# In[7]:
 
 
 datepicker_single = html.Div(
@@ -75,9 +58,6 @@ datepicker_single = html.Div(
 
 
 # ### График ЗП и премии
-# 
-
-# In[8]:
 
 
 graf_1 = dcc.Graph(
@@ -88,10 +68,6 @@ graf_1 = dcc.Graph(
 
 
 # ### График динамики показателей за 12 мес  (с фильтром по показателю)
-# 
-
-# In[9]:
-
 
 graf_3 = dcc.Graph(
     id = 'id_graf_3',
@@ -101,19 +77,12 @@ graf_3 = dcc.Graph(
 
 
 # ### Таблица рабочих дней на неделю
-# 
-# 
-
-# In[10]:
 
 
 work_list = pd.read_csv('work_list.csv')
 work_list = work_list[['manager','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']]
 work_list.columns = ['Сотрудник','Пн','Вт','Ср','Чт','Пт','Сб','Вс'] 
 work_list = work_list.replace( {0: '-' , 1: '+'})
-
-
-# In[11]:
 
 
 table_4 = dbc.Table.from_dataframe(work_list, striped=True, bordered=True, hover=True, index=False,
@@ -124,9 +93,6 @@ table_4 = dbc.Table.from_dataframe(work_list, striped=True, bordered=True, hover
 
 
 # ### Меню выбора отчета
-
-# In[12]:
-
 
 inline_radioitems = html.Div(
     [
@@ -145,8 +111,6 @@ inline_radioitems = html.Div(
 
 
 # ### Слои
-
-# In[13]:
 
 
 layout = [
@@ -171,7 +135,6 @@ layout = [
                         [
                             html.H6('Отчет по конверсиям, счетам и пр.'),
                             html.Div(id='id_tab2'),
-                            #table_2,
                         ],
                         width=6
                     ),
@@ -223,7 +186,6 @@ def update_fig_sales(date_inp):
     df_managers_sales.columns= ['manager', 'bonus', 'all_orders', 'paid_orders', 'salary', 'total_sum', 'bonus_sum','efficiency', 'total_salary']
 
     sd_salary = df_managers_sales[['manager','salary','bonus_sum','total_salary']]
-    sd_salary
 
     fig_1 = go.Figure()
     fig_1.add_trace(go.Bar(
@@ -262,8 +224,7 @@ def update_fig_sales(date_inp):
     tab_achievements.index.name = "№"
     tab_achievements.index = tab_achievements.index + 1
     tab_achievements.columns=['Сотрудник', 'Все заказы', 'Оплаченные','Эффективность', 'Общая сумма']
-    tab_achievements
-    
+
     table_2 = dbc.Table.from_dataframe(tab_achievements, striped=True, bordered=True, hover=True, index=True,
                                    style = {
                                        'fontFamily': 'Arial',
@@ -313,7 +274,6 @@ def update_fig_dinamics(value_ch, date_inp):
     )
     df_weekly_sum.drop(df_weekly_sum.tail(1).index,inplace=True)
 
-    #df_weekly_paid
 
     df_weekly = df_weekly_sum
     

@@ -1,18 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-
 import dash
-from dash import Dash, html, dcc, callback
+from dash import html, dcc, callback
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output 
-import plotly.express as px
-from flask import Flask
 import plotly.graph_objs as go
 import pandas as pd
-import numpy as np
 from datetime import datetime
-import datetime as dt
 
 #установим формат вывода данных типа float - 2 знака после заптой (для лучшего восприятия числовых данных)
 pd.set_option('display.float_format', '{:.2f}'.format)
@@ -42,11 +34,6 @@ date_minus_1y = date_today - pd.DateOffset(days=365)
 date_minus_1y_30d = date_minus_1y  - pd.DateOffset(days=30)
 date_1day_current_month = date_today.replace(day=1).date()
 current_mnth = pd.Period(date_today, freq='M')
-
-
-#  
-
-# In[23]:
 
 
 str_date = 'НА ДАТУ:  ' + datetime.now().strftime("%d.%m.%Y")
@@ -80,19 +67,12 @@ cards_date = dbc.Card(
                 [
                     html.H3('ОЧЁТ ПО ТЕКУЩИМ ПОКАЗАТЕЛЯМ', style=style_1),
                     html.H3(str_date, style=style_1),
-#                     html.Div(
-#                         dcc.DatePickerSingle(date=datetime.now(),
-#                                              display_format = 'YYYY-MM-DD',
-#                                              className="mb-2",
-#                                              id = 'dt_selector')
-#                     )
                     html.Br(),
                     html.H3(str_txt_2, style=style_2),
                     html.H3(str_txt_3, style=style_3),
 
                 ],  style={'font-family': 'Lato'}, 
             ), 
-            #dbc.CardFooter("По объёму выручки"),
         ], outline=True, style={"border" : "0"},
 
     )
@@ -130,8 +110,6 @@ df_sbb = (
 
 # ### Сравнение объемов с счетов по месяцам года
 
-# In[25]:
-
 
 df_sbb_2023 = (
     df_sbb
@@ -150,10 +128,6 @@ df_sbb_2024 = (
                                                                                        'sum': 'sum'})
     .reset_index()
 )
-
-
-# In[26]:
-
 
 fig_1_t1  = go.Bar(
 
@@ -196,9 +170,6 @@ fig_1.update_traces(texttemplate='%{text:.3s}', textposition='outside')
 fig_1.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 
 
-# In[27]:
-
-
 fig_2_t1  = go.Bar(
 
         x = df_sbb_2024['class_name'],
@@ -218,7 +189,6 @@ fig_2_t2 = go.Bar(
         marker_color =clrs['grey'],
         marker_line_width=0,
         marker_line_color='rgb(8,48,107)',
-#         opacity=0.5
     )
 
 fig_2_data = [fig_2_t1, fig_2_t2]
@@ -240,8 +210,6 @@ fig_2.update_traces(texttemplate='%{text:.3s}', textposition='outside')
 fig_2.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 
 
-# In[28]:
-
 
 gr_fig_1 = dcc.Graph(
     id = 'id_gr_fig_1',
@@ -258,10 +226,6 @@ gr_fig_2 = dcc.Graph(
     style={'height': '55vh'})
 
 
-# ### затраты на рекламу по каналам 
-
-# In[29]:
-
 
 today_month = pd.Period(date_today.now().strftime('%Y-%m'), freq='M')
 last_year_month = today_month - pd.offsets.MonthEnd(12)
@@ -272,8 +236,6 @@ adv_cost['month'] = adv_cost['date'].dt.to_period('M')
 adv_cost_2023 = adv_cost.query('month == @last_year_month')
 adv_cost_2024 = adv_cost.query('month == @today_month')
 
-
-# In[30]:
 
 
 fig_4_t1  = go.Bar(
@@ -321,9 +283,6 @@ fig_4.update_traces(texttemplate='%{text:.3s}', textposition='outside')
 fig_4.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 
 
-# In[31]:
-
-
 gr_fig_4 = dcc.Graph(
     id = 'id_gr_fig_4',
     figure = fig_4,
@@ -333,8 +292,6 @@ gr_fig_4 = dcc.Graph(
 
 
 # ### График и фильтр
-
-# In[32]:
 
 
 sales_gr = dcc.Graph(
@@ -363,8 +320,6 @@ monthly_sales_radioitems = html.Div(
 # ### Фильтр даты
 
 # ### Карточки выполнения плана продаж
-
-# In[33]:
 
 
 ads_sum_23 = int(adv_cost.query('month == @last_year_month')['sum'].sum())
@@ -398,9 +353,6 @@ ads_sum_24 = round(ads_sum_24/1000, 1)
 
 #  
 
-# In[34]:
-
-
 def cards(val_prc, str_line, val_f, val_p, str_line_2, str_line_3):
     colors = {'red' : '#ff6262',
           'green' : '#6ac65e'}
@@ -416,7 +368,6 @@ def cards(val_prc, str_line, val_f, val_p, str_line_2, str_line_3):
 
     cards_1 = dbc.Card(
         [
-            #dbc.CardHeader("План продаж"),
             dbc.CardBody(
                 [
                     html.H3(str_prc, style={'align' : 'center',
@@ -462,7 +413,6 @@ def cards(val_prc, str_line, val_f, val_p, str_line_2, str_line_3):
 
                 ],  style={'font-family': 'Lato'}, 
             ), 
-            #dbc.CardFooter("По объёму выручки"),
         ], outline=True, style={"border" : "0"},
 
     )
@@ -471,7 +421,6 @@ def cards(val_prc, str_line, val_f, val_p, str_line_2, str_line_3):
 
 # ### Слои
 
-# In[36]:
 
 
 layout =   [
@@ -494,8 +443,7 @@ layout =   [
                 [
                     dbc.Col(sales_gr , width=8),
                     dbc.Col(gr_fig_4, width=4),   
-                    #dbc.Col(monthly_sales_graph, width=10),                    
-                ]),    
+                ]),
 
             
              ]
@@ -565,13 +513,9 @@ def update_fig_sales(sales_radioitems_value):
     )
 
     fig = go.Figure(data=fig_1_data, layout=fig_1_layout) #
-#     fig.show()
-       
+
     
     return fig
-
-
-# In[ ]:
 
 
 

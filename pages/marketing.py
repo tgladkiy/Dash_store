@@ -1,20 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[52]:
-
-
 import dash
 import pandas as pd
-import numpy as np
 import plotly.graph_objs as go
-import plotly.express as px
-from dash import Dash, html, dcc, callback
+from dash import html, dcc, callback
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output 
-from flask import Flask
 from datetime import datetime
-import datetime as dt 
 from plotly.subplots import make_subplots
 
 #установим формат вывода данных типа float - 2 знака после заптой (для лучшего восприятия числовых данных)
@@ -44,14 +34,9 @@ clrs  = { 'basic' : '#2c3e50',
 
 # Вызов и обработка данных 
 
-# In[55]:
-
 
 today_dt = pd.to_datetime(datetime.now())
 today_mth_dt = today_dt.to_period('M')
-
-
-# In[56]:
 
 
 df_statistics = pd.read_csv('df_statistics.csv')
@@ -60,22 +45,15 @@ advertising = pd.read_csv('advertising.csv')
 orders = pd.read_csv('orders.csv')
 
 
-# In[57]:
-
-
 orders['date'] = pd.to_datetime(orders['date'])
 df_statistics['date'] = pd.to_datetime(df_statistics['date'])
 
 
 # ### Дата отчета
 
-# In[59]:
-
-
 datepicker_single = html.Div(
     dcc.DatePickerSingle(
         date=datetime.now(),
-#        date=fake_today_dt,
         display_format = 'YYYY-MM-DD',
         className="mb-2",
         id = 'dt_selector')
@@ -83,8 +61,6 @@ datepicker_single = html.Div(
 
 
 # ### График конверсий с сайта в продажи
-
-# In[60]:
 
 
 df_statistics['sum_adv'] = df_statistics['email'] + df_statistics['google'] + df_statistics['vk']+ df_statistics['yandex']
@@ -102,9 +78,6 @@ df_all = (
     .merge(df_orders, left_on='date', right_on='date')
 )
 df_all['date'] = pd.to_datetime(df_all['date'])
-
-
-# In[61]:
 
 
 df_weekly = df_all.groupby(pd.Grouper(freq='W', key='date', closed='left')).mean()
@@ -152,8 +125,6 @@ fig.update_layout(title_text="Динамика визитов на сайт, з�
                  )    #height=600, width=600,
 
 
-# In[62]:
-
 
 gr_visits_inv_ord = dcc.Graph(
     id = 'id_gr_visits_inv_ord',
@@ -163,25 +134,14 @@ gr_visits_inv_ord = dcc.Graph(
 
 
 # ### Воронка
-# 
-# 
-
-# In[63]:
-
 
 df_all['month'] = df_all['date'].dt.to_period('M')
-
-
-# In[65]:
 
 
 today_dt = pd.to_datetime('2024-01-30', format='%Y-%m-%d')
 today_mth_dt = today_dt.to_period('M')
 today_dt_1m = today_dt - pd.offsets.MonthEnd(1)
 today_dt_3m = today_dt - pd.offsets.MonthEnd(3)
-
-
-# In[66]:
 
 
 funn_1m = dict(
@@ -197,8 +157,6 @@ funn_3m = dict(
 )
 funn_keys = ['Визиты на сайт','Звонки/Счета','Оплаченые счета']
 
-
-# In[67]:
 
 
 list_1m = [round(elem, 0) for elem in list(funn_1m.values()) ]
@@ -357,9 +315,6 @@ def update_fig_sales(kanals_radioitems_value):
     
     return fig_3
 
-    #iplot(fig, filename='multiple-axes-double')
-    #**Line_Bar_chart Code**:
-
 
 # In[74]:
 
@@ -372,10 +327,6 @@ gr_adv = dcc.Graph(
 
 
 # ### Фильтр отчета по каналам
-# 
-# 
-
-# In[75]:
 
 
 inline_radioitems = html.Div(
@@ -399,10 +350,7 @@ inline_radioitems = html.Div(
 
 # ### Слои
 
-# In[76]:
-
-
-layout = [    
+layout = [
             dbc.Row(
                 [
                     dbc.Col(gr_visits_inv_ord, width=7),
